@@ -67,7 +67,8 @@ public class GitHubUserReposService {
                         repoBranchesUrl,
                         HttpMethod.GET,
                         entity,
-                        new ParameterizedTypeReference<>() {},
+                        new ParameterizedTypeReference<>() {
+                        },
                         repositoryDto.owner().login(),
                         repositoryDto.name()
                 );
