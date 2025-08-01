@@ -9,5 +9,6 @@ public record GitHubRepositoryDto(
         Boolean fork
 ) {
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public record RepositoryOwner(String login) {}
+    public record RepositoryOwner(String login) {
+    }
 }

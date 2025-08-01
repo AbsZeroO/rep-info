@@ -60,7 +60,8 @@ public class GitHubUserReposService {
                     userReposUrl,
                     HttpMethod.GET,
                     entity,
-                    new ParameterizedTypeReference<>() {},
+                    new ParameterizedTypeReference<>() {
+                    },
                     username
             );
 
@@ -87,7 +88,8 @@ public class GitHubUserReposService {
                     repoBranchesUrl,
                     HttpMethod.GET,
                     entity,
-                    new ParameterizedTypeReference<>() {},
+                    new ParameterizedTypeReference<>() {
+                    },
                     owner,
                     repoName
             );
