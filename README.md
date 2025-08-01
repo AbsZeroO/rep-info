@@ -59,7 +59,7 @@ Run integration tests with:
 
 * Request:
 ```http request
-GET /api/github/{username}/repositories
+GET http://localhost:8080/api/{username}/repositories
 ```
 
 Note: {username} is a placeholder and should be replaced with the actual GitHub username.
@@ -76,11 +76,11 @@ HTTP 200 and body with:
     "branches": [
       {
         "name": "main",
-        "lastCommitSha": "a6c2h364g5fxg7h8i9j0"
+        "lastCommitSha": "7fd1a60b01f91b314f59955a4e4d4e80d8edf11d"
       },
       {
         "name": "develop",
-        "lastCommitSha": "z9y8x7w6vaswt3s2r1q0"
+        "lastCommitSha": "64d1a60b01f91b314f59955a4e4d4e8778e4411d"
       }
     ]
   }
@@ -94,8 +94,15 @@ HTTP 404 and body with:
 ```json
 {
   "status": 404,
-  "message": "GitHub {username} not found"
+  "message": "GitHub user `{username}` not found"
 }
 ```
 
 Note: {username} in the message will be replaced with the requested username.
+
+
+### Example  
+
+```bash
+curl -X GET http://localhost:8080/api/octocat/repositories
+```
