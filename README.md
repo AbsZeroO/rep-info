@@ -94,7 +94,7 @@ HTTP 404 and body with:
 ```json
 {
   "status": 404,
-  "message": "GitHub user `{username}` not found"
+  "message": "Requested GitHub user 'username' does not exist or could not be found"
 }
 ```
 
